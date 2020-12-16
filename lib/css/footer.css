@@ -1,0 +1,168 @@
+/*-----  MOBILE  -----*/
+@media only screen and (max-width: 768px) {
+    .m-ft_list {
+        padding: 0!important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .m-ft_logo {
+        width: 100%!important;
+        width: unset!important;
+        flex: 1;
+    }
+
+    .m-ft_logo>img {
+        height: 120px!important;
+        width: 120px!important;
+    }
+
+    .m-ft_bd {
+        display: none!important;
+    }
+
+    .m-ft_wechat>label {
+        display: none;
+    }
+
+    .m-ft_logo>label {
+        display: none;
+    }
+
+    .m-ft_wechat {
+        flex: 1;
+    }
+    .m-ft_wechat>img {
+        width: 120px!important;
+        height: 120px!important;
+    }
+
+    .m-ft_copy {
+       flex-direction: column;
+    }
+
+    .m-backup {
+        display: none!important;
+    }
+
+}
+
+
+
+
+
+
+footer {
+  background: #333;
+}
+
+.m-footer {
+  display: flex;
+  list-style: none;
+  padding: 40px 15px 0 15px;
+  background: #333;
+  width: 100%;
+  flex-direction: column;
+  color: #ccc;
+}
+
+
+.m-ft_list {
+    display: flex;
+    padding: 40px 0;
+}
+
+.m-ft_logo {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-ft_logo>img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.m-ft_logo>label {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.m-ft_bd {
+    display: flex;
+    padding: 0 10px;
+    flex: 1;
+    border-right: 1px solid #666;
+    border-left: 1px solid #666;
+}
+
+.m-ft_bd>.m-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 10px;
+    align-items: center;
+    /* border-left: 1px solid #aaa; */
+}
+
+.m-ft_wechat {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.m-ft_wechat>img {
+    width: 150px;
+    height: 150px;
+    background: #aaa;
+}
+
+.m-ft_wechat>label {
+    font-size: 16px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.m-ft_bd>.m-col>li {
+    margin: 8px 0;
+}
+
+.m-col + .m-col {
+    border-left: 1px solid #666;
+}
+
+.m-ft_copy {
+    margin: 20px 0 0 0;
+    border-top: 1px solid #fff;
+    padding: 20px 60px 10px 60px;
+    display: flex;
+}
+
+.m-copy {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+.m-copy>li:first-child {
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+.m-copy>li {
+    margin: 6px 0;
+}
+
+.m-backup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.m-backup>a {
+    margin: 6px;
+}
