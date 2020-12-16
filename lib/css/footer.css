@@ -64,6 +64,12 @@ footer {
   width: 100%;
   flex-direction: column;
   color: #ccc;
+  align-items: center;
+}
+
+.m-footer_wrap {
+    max-width: 1920px;
+    width: 100%;
 }
 
 
@@ -141,6 +147,7 @@ footer {
     border-top: 1px solid #fff;
     padding: 20px 60px 10px 60px;
     display: flex;
+    border-image: linear-gradient(90deg, #333 0%, #666 10%,#666 50%,#666 90%, #333) 1 10;
 }
 
 .m-copy {

@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding:0;
+  min-width: 1170px;
 }
 li {
   list-style: none;
@@ -126,20 +127,35 @@ a {
   width: 100%;
   top: 0;
   z-index: 999;
+  align-items: center;
 }
 
 
 /*-----  PC  -----*/
 @media only screen and (min-width: 768px) {
 
-  
+  .m-nav_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-nav {
+    max-width: 1920px;
+  }
+  .nav-item+.nav-item, .nav-item:first-child, .nav-item:last-child {
+    border-left: 1px solid #ccc;
+    border-image: linear-gradient(#eee, #ccc,#eee) 1 10;
+  }
 
   .m-logo {
     display: flex;
     align-items: center;
     height: 100px;
-    margin: 0 20px;
+    padding: 0 20px;
     color: #fff;
+    width: 100%;
+    max-width: 1920px;
   }
   .m-logo>button {
     display: none;
@@ -158,12 +174,34 @@ a {
     display: flex;
     align-items: center;
   }
-  .m-logo-r>label {
-    cursor: pointer;
-    background: #333;
-    color: #ccc;
-    padding: 5px 20px;
-    border-radius: 5px;
+  .m-link {
+    display: flex;
+    background: #a80000;
+    padding: 0;
+    border-radius: 6px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .m-link>li + li {
+      margin-left: 1px;
+  }
+  .m-link>li {
+      background: #333;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: .5s;
+  }
+  .m-link>li:hover {
+      background: #ff6600;
+  }
+
+  .m-link>li:first-child {
+      border-radius: 5px 0 0 5px;
+  }
+
+  .m-link>li:last-child {
+      border-radius: 0 5px 5px 0 ;
   }
   .m-logo-r input {
     margin-left: 20px;
@@ -180,14 +218,16 @@ a {
     background: #eee;
     height: 50px;
     align-items: center;
+    width: 100%;
   }
   .navbar-nav {
     width: 100%;
     height: 100%;
     display: flex;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     font-size: 16px;
+    float: unset!important;
   }
   .nav-item {
     display: flex;

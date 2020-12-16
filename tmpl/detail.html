@@ -1,0 +1,39 @@
+<z:config type="ArticleDetail" name="文章详细页" />
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!--包含通用样式-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <cms:include file="include.template.html" />
+    <script src="${FrontAppContext}/framework/components/qrcode.js"></script>
+    <title>${Content.Title}</title>
+    <meta name="description" content="${Site.Description}" />
+
+    <link rel="stylesheet" href="../lib/css/header.css">
+    <link rel="stylesheet" href="../lib/css/footer.css">
+  </head>
+  <body class="bg-white">
+    <!-- 包含页头 -->
+    <cms:include file="header.template.html">{ZCMS:文件包含}</cms:include>
+    <div class="container">
+      <div class="row">
+        <!-- 导航及标题 -->
+        <div class="col-md-8">
+          <!-- 正文 -->
+          <div class="m-lg" style="color: #111111; text-align: left; font-size: 16px; line-height: 2em; overflow: hidden;">${(Article.Content)}</div>
+        </div>
+        <!-- 包含页尾 -->
+        <cms:include file="footer.template.html">{ZCMS:文件包含}</cms:include>
+
+
+        <script src="../lib/js/jquery.min.js"></script>
+        <script src="../lib/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/js/bootstrap-hover-dropdown.min.js"></script>
+        <script src="../lib/js/header.js"></script>
+        <script src="../lib/js/index.js"></script>
+      </body>
+    </html>
