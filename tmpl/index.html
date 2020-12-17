@@ -1,4 +1,4 @@
-<z:config type="SiteIndex" name="站点首页" />
+<z:config type="SiteIndex" name="站点首页" />
 
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -9,12 +9,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
 
-    <cms:include file="include.template.html" />
+    <cms:include file="include.template.html" />
     <title>${Catalog.name}</title>
     <meta name="description" content="${Site.Description}" />
 
-    <link rel="stylesheet" href="../lib/css/index.css">
+    <link rel="stylesheet" href="../lib/css/default.css">
+    <link rel="stylesheet" href="../lib/css/nav.css">
+    <link rel="stylesheet" href="../lib/css/rslide.css">
     <link rel="stylesheet" href="../lib/css/header.css">
+    <link rel="stylesheet" href="../lib/css/index.css">
+    
     <link rel="stylesheet" href="../lib/css/footer.css">
   </head>
 
@@ -41,7 +45,7 @@
           <cms:article count="4" loadextend="true" catalogid="21157" >
             <z:list>
             <li>
-              <a href="${Article.Link}"><label class="u-tl">${Article.Title}</label></a>
+              <label class="u-tl"><a href="${Article.Link}">${Article.Title}</a></label>
               <span class="u-date">${format(Article.PublishDate,'yyyy-MM-dd')}</span>
             </li>
             </z:list>
@@ -58,10 +62,10 @@
           <i>更多</i>
         </div>
         <div class="m-bd">
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
         </div>
       </div>
       <div class="m-item">
@@ -71,10 +75,10 @@
           <i>更多</i>
         </div>
         <div class="m-bd">
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
         </div>
       </div>
       <div class="m-item m-lg">
@@ -87,8 +91,8 @@
           <li>
             <img src="">
             <p>
-              <label class="u-tl">2020年国家自然科学基金申报过程2020年国家自然科学基金申报过程</label>
-              <span>环太平洋大学联盟</span>
+              <label class="u-tl"><a href="#">2020年国家自然科学基金申报过程2020年国家自然科学基金申报过程</a></label>
+              <span>a环太平洋大学联盟</span>
               <span>2020-12-10 09:00</span>
               <span>树华楼三层会议室</span>
             </p>
@@ -96,7 +100,7 @@
           <li>
             <img src="">
             <p>
-              <label class="u-tl">2020年国家自然科学基金申报过程2020年国家自然科学基金申报过程</label>
+              <label class="u-tl"><a href="#">2020年国家自然科学基金申报过程2020年国家自然科学基金申报过程</a></label>
               <span>环太平洋大学联盟</span>
               <span>2020-12-10 09:00</span>
               <span>树华楼三层会议室</span>
@@ -111,10 +115,10 @@
           <i>更多</i>
         </div>
         <div class="m-bd">
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl">xxx</label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
+          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
         </div>
       </div>
       <div class="m-item">

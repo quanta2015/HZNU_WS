@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #333;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+
+/*-----  PC  -----*/
+@media only screen and (min-width: 768px) {
+  body {
+    min-width: 1170px;
+  }
+}
