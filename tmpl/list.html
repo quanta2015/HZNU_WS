@@ -1,0 +1,101 @@
+<z:config type="SiteIndex" name="站点首页" />
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!--包含通用样式-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <cms:include file="include.template.html" />
+    <title>${Catalog.name}</title>
+    <meta name="description" content="${Site.Description}" />
+
+    <link rel="stylesheet" href="../lib/css/default.css">
+    <link rel="stylesheet" href="../lib/css/nav.css">
+    <link rel="stylesheet" href="../lib/css/rslide.css">
+    <link rel="stylesheet" href="../lib/css/header.css">
+    <link rel="stylesheet" href="../lib/css/footer.css">
+    <link rel="stylesheet" href="../lib/css/list.css">
+    
+  </head>
+
+  <body class="bg-white">
+    <!-- 包含页头 -->
+    <cms:include file="header.template.html">{ZCMS:文件包含}</cms:include>
+
+  
+    <div class="container m-list">
+      <div class="m-list_wrap">
+        <div class="m-aside">
+          <h1>新闻公告</h1>
+          <li>学院概况</li>
+          <li>学院简介</li>
+          <li>学院领导</li>
+        </div>
+        <div class="m-bd">
+          <h1>
+            <span>当前位置：</span> 
+            <a href="#">学院首页</a>
+            <a href="@">新闻公告</a>
+          </h1>
+          <div class="m-bd_list">
+            <li>
+              <label><a href="#">北京大学儿童青少年卫生研究所教学科研职位招聘启事2020-09-15</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">凝心聚力，众志成城——北京大学公共卫生学院全力以赴抗击疫情纪实2020-06-12</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">北京大学公共卫生学院生物统计系统计师招聘启事2020-05-25</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">北京大学公共卫生学院2020年教学科研职位招聘启事2020-04-30</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">2020年国家自然科学基金申请经验交流会暨公卫学院教学科研沙龙2020-12-15</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">北京大学公共卫生学院卢庆彬课题组博士后招聘启事2020-12-14</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">环太平洋大学联盟第二届“公共卫生危机管理”网络研讨会在线上举行2020-12-10</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">北京大学治理现代化论坛（2020）暨中国应急管理和政策分析（CEMPA）年会公共卫生应急管理分论坛顺利</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">公共卫生学院全球卫生学系一行拜访中国疾控中心慢病中心2020-12-10</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+            <li>
+              <label><a href="#">北京大学获批为教育部和国家卫生健康委高层次应用型公共卫生人才培养创新项目立项单位</a></label>
+              <span class="u-date">2020-09-15</span>
+            </li>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- 包含页尾 -->
+    <cms:include file="footer.template.html">{ZCMS:文件包含}</cms:include>
+
+
+    <script src="../lib/js/jquery.min.js"></script>
+    <script src="../lib/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/js/bootstrap-hover-dropdown.min.js"></script>
+    <script src="../lib/js/header.js"></script>
+    <script src="../lib/js/index.js"></script>
+
+  </body>
+</html>
