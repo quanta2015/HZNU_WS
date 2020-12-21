@@ -1,39 +1,82 @@
 <z:config type="ArticleDetail" name="文章详细页" />
+
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
-    <!--包含通用样式-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="format-detection" content="telephone=no">
-
-    <cms:include file="include.template.html" />
-    <script src="${FrontAppContext}/framework/components/qrcode.js"></script>
-    <title>${Content.Title}</title>
-    <meta name="description" content="${Site.Description}" />
-
-    <link rel="stylesheet" href="../lib/css/header.css">
-    <link rel="stylesheet" href="../lib/css/footer.css">
-  </head>
-  <body class="bg-white">
-    <!-- 包含页头 -->
-    <cms:include file="header.template.html">{ZCMS:文件包含}</cms:include>
-    <div class="container">
-      <div class="row">
-        <!-- 导航及标题 -->
-        <div class="col-md-8">
-          <!-- 正文 -->
-          <div class="m-lg" style="color: #111111; text-align: left; font-size: 16px; line-height: 2em; overflow: hidden;">${(Article.Content)}</div>
-        </div>
-        <!-- 包含页尾 -->
-        <cms:include file="footer.template.html">{ZCMS:文件包含}</cms:include>
+ 
+<head> 
+  <!--包含通用样式--> 
+  <cms:include file="include.template.html"  />
+      <title>${Catalog.name}</title> 
+</head>
 
 
-        <script src="../lib/js/jquery.min.js"></script>
-        <script src="../lib/js/bootstrap.bundle.min.js"></script>
-        <script src="../lib/js/bootstrap-hover-dropdown.min.js"></script>
-        <script src="../lib/js/header.js"></script>
-        <script src="../lib/js/index.js"></script>
-      </body>
-    </html>
+<body class="bg-white">
+        
+  <!-- 包含页头 -->
+      <cms:include file="header.template.html">{ZCMS:文件包含}</cms:include>
+
+    
+  <!-- 栏目导航 -->
+      <div class="container m-slide">
+            <cms:imageplayer code="home_imglist">{ZCMS:图片播放器}</cms:imageplayer>
+      </div>
+
+  <!--左侧栏目 -->
+  
+    <div class="m-aside">
+        <h1>${Catalog.Name}</h1>
+        <ul>
+                <z:if condition="${catalog.ChildCount>0}">          
+                  <cms:catalog level="child">
+                    <z:list>                                                         
+                      <li>
+                      <a id="${Catalog.InnerCode}" href="${Catalog.Link}">${Catalog.Name}&nbsp;&nbsp; &gt;</a>
+                      </li>                           
+                    </z:list>
+                  </cms:catalog>
+                </z:if>
+                <z:elseif condition="${catalog.TreeLevel>1}">
+                  <cms:catalog level="current">
+                    <z:list>                                                         
+                      <li>
+                      <a id="${Catalog.InnerCode}" href="${Catalog.Link}">${Catalog.Name}&nbsp;&nbsp; &gt;</a>
+                      </li>                               
+                    </z:list>
+                  </cms:catalog>
+                </z:elseif>
+                <z:else>
+                  <li>
+                     <a id="${Catalog.InnerCode}" href="${Catalog.Link}">${Catalog.Name}&nbsp;&nbsp; &gt;</a>
+                 </li>
+                  
+                </z:else>
+        </ul>
+    </div>
+
+  <!-- 右侧显示栏目第一文章内容 -->
+   <div class="container m-list">
+     
+          <cms:article   loadcontent="true">                         
+              <h2>${Article.Title}</h2>                                                                     
+              <div align="right" class="p-sm m-t-xs b-b b-light" style="font-size: 15px;color:grey;">            
+                  <cms:position spliter=" &gt; " />                                                                
+              </div>
+             ${(Article.Content)} 
+          </cms:article> 
+  </div>  
+      
+  <!-- 包含页尾 -->
+      <cms:include file="footer.template.html">{ZCMS:文件包含}</cms:include>
+
+      
+  <script src=".. /lib/js/jquery.min.js"></script>
+      
+  <script src=".. /lib/js/bootstrap.bundle.min.js"></script>
+      
+  <script src=".. /lib/js/bootstrap-hover-dropdown.min.js"></script>
+      
+  <script src=".. /lib/js/header.js"></script> 
+    
+</body>
+
+</html>

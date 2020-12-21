@@ -1,162 +1,56 @@
-<z:config type="Block" name="首页头部" />
+<z:config type="Block" name="首页头部"  />
 
-<nav class="m-nav navbar navbar-expand-md navbar-light bg-light g-base">
-  <div class="m-nav_wrap">
-    <div class="m-logo">
+<nav class="m-nav navbar navbar-expand-md navbar-light bg-light g-base">
+    <div class="m-nav_wrap">
+        <div class="m-logo">
 
-      <div class="m-logo-m">
-         <img class="pc" src="../lib/img/logo.png" alt="">
-         <img class="mobile" src="../lib/img/logo_mobile.png" alt="">
-      </div>
-      <div class="m-logo-r">
-        <div class="m-link">
-          <li>杭州师范大学</li>
-          <li>杭州师范大学科研院</li>
-          <li>ENGLISH</li>
-        </div>
-       <div class="m-search">
-         <input type="text">
-       </div>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="m-menu collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/">首页</a>
-        </li>
+            <div class="m-logo-m">
+                 <img class="pc" src="../lib/img/logo.png" alt="">
+                 <img class="mobile" src="../lib/img/logo_mobile.png" alt="">
+              </div>
+            <div class="m-logo-r">
+                <div class="m-link">
+                    <li><a href="http://www.hznu.edu.cn" target='_blank'>学校首页</a></li>
+                    <li><a href="http://yxb.hznu.edu.cn" target='_blank'>学部首页</a></li>
+                    <li><a href="english">ENGLISH</a></li> 
+                  </div>
+               <div class="m-search">
+                   <input type="text">
+                 </div>
+              </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+        <div class="m-menu collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav">
+                 <li class="nav-item">
+                    <a class="nav-link" href="/">首页</a>
+                 </li> 
 
-        <li class="nav-item dropdown">
-          <cms:catalog alias="xygk" type="Article"> 
-            <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">学院概况</a>
-          </cms:catalog> 
-          <div class="dropdown-menu">
-            <cms:content catalog="学院概况" name="学院简介">
-              <a class="dropdown-item g-text-gray" href="${Content.Link}#1" target='_self'>学院简介</a>
-            </cms:content>
-            <cms:content catalog="学院概况" name="学院简介">
-              <a class="dropdown-item g-text-gray" href="${Content.Link}#2" target='_self'>学院领导</a>
-            </cms:content>
-            <cms:content catalog="学院概况" name="系所介绍">
-              <a class="dropdown-item g-text-gray" href="${Content.Link}#3" target='_self'>系所介绍</a>
-            </cms:content>
-          </div>
-        </li>
+                <cms:catalog count="8" level="root"  type="Article"> 
+                    <z:list> 
+                    <li class="nav-item dropdown">         
+                       <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">${Catalog.Name}</a>                   
+                       <div class="dropdown-menu">
+                           <cms:catalog  type="Article"  level="Child" > 
+                               <z:list> 
+                                  <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">${Catalog.Name}</a>
+                               </z:list>
+                            </cms:catalog>
+                       </div>
+                    </li>
+                    </z:list>
+               </cms:catalog> 
 
-        <li class="nav-item dropdown">
-          <cms:catalog alias="xwgg" type="Article"> 
-            <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">新闻公告</a>
-          </cms:catalog> 
-          <div class="dropdown-menu">
-            <cms:catalog alias="xwgg_xwzx" type="Article"> 
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">新闻资讯</a>
-            </cms:catalog>
-            <cms:catalog alias="xwgg_tzgg" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">通知公告</a>
-            </cms:catalog>
-            <cms:catalog alias="xwgg_zlxz" type="Article"> 
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">资料下载</a>
-            </cms:catalog>
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <cms:catalog alias="szdw" type="Article"> 
-            <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">师资队伍</a>
-          </cms:catalog>
-          <div class="dropdown-menu">
-            <cms:catalog alias="szdw_lxbywstjxx" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">流行病与卫生统计学系</a>
-            </cms:catalog>
-            <cms:catalog alias="szdw_ldwsyhjwsxx" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">劳动卫生与环境卫生学系</a>
-            </cms:catalog>
-            <cms:catalog alias="szdw_yyydlxx" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">营养与毒理学系</a>
-            </cms:catalog>
-            <cms:catalog alias="szdw_wsglyzcx" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">卫生管理与政策系</a>
-            </cms:catalog>
-            <cms:catalog alias="szdw_jkglx" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">健康管理系</a>
-            </cms:catalog>
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <cms:catalog alias="rcpy" type="Article"> 
-            <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">人才培养</a>
-          </cms:catalog>  
-          <div class="dropdown-menu">
-            <cms:catalog alias="rcpy_zsjy" type="Article"> 
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">招生就业</a>
-            </cms:catalog>
-            <cms:catalog alias="rcpy_jyjx" type="Article"> 
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">教育教学</a>
-            </cms:catalog>
-            <cms:catalog alias="rcpy_hdfc" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">活动风采</a>
-            </cms:catalog>
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <cms:catalog alias="kxyj" type="Article"> 
-            <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">科学研究</a>
-          </cms:catalog>
-          <div class="dropdown-menu">
-            <cms:catalog alias="kxyj_xkjs" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">学科建设</a>
-            </cms:catalog>
-            <cms:catalog alias="kxyj_kypt" type="Article"> 
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">科研平台</a>
-            </cms:catalog>
-            <cms:catalog alias="kxyj_xsdt" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">学术动态</a>
-            </cms:catalog>
-          </div>
-        </li>
-        <li class="nav-item">
-          <cms:catalog alias="rszp" type="Article">
-            <a class="nav-link" href="${Catalog.Link}" data-toggle="dropdown">人事招聘</a>
-          </cms:catalog>
-        </li>
-        <li class="nav-item dropdown">
-          <cms:catalog alias="djgh" type="Article">
-            <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">党建工会</a>
-          </cms:catalog>
-          <div class="dropdown-menu">
-            <cms:catalog alias="djgh_djfc" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">党建风采</a>
-            </cms:catalog>
-            <cms:catalog alias="djgh_ghhd" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">工会活动</a>
-            </cms:catalog>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <cms:catalog alias="xyzj" type="Article">
-            <a class="nav-link dropdown-toggle" href="${Catalog.Link}1" data-toggle="dropdown">校友之家</a>
-          </cms:catalog>
-          <div class="dropdown-menu">
-            <cms:catalog alias="xyzj_jcxy" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">杰出校友</a>
-            </cms:catalog>
-            <cms:catalog alias="xyzj_xydt" type="Article">
-              <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">校友动态</a>
-            </cms:catalog>
-          </div>
-        </li>
-        <li class="nav-item">
-          <cms:catalog alias="xyzj" type="Article">
-            <a class="nav-link" href="${Catalog.Link}" href="${Catalog.Link}">远程办公</a>
-          </cms:catalog>       
-        </li>
-      </ul>
-    </div>
-  </div>
+                  <li class="nav-item">
+                    <cms:catalog alias="xyzj" type="Article">
+                        <a class="nav-link" href="${Catalog.Link}" href="${Catalog.Link}">远程办公</a>
+                      </cms:catalog>       
+                  </li>
+              </ul>
+          </div>
+      </div>
 </nav>

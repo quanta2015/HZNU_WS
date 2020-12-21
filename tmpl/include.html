@@ -1,0 +1,40 @@
+<z:config type="Block" name="互动功能包含模板" />
+ 
+<!--包含通用样式-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="description" content="${Site.Description}" />
+
+<link rel="stylesheet" href="../lib/css/default.css">
+<link rel="stylesheet" href="../lib/css/rslide.css">
+<link rel="stylesheet" href="../lib/css/index.css">
+<link rel="stylesheet" href="../lib/css/header.css">
+<link rel="stylesheet" href="../lib/css/footer.css">
+
+<script>
+	var frontAppContext = '${FrontAppContext}';
+	var siteID = "${Site.ID}";
+</script>
+<script src="../js/zcms_require.js" contextpath="${FrontAppContext}"></script>
+<script>
+	if (isIE && ieVersion < 9 || isIE8) {
+		importJS('../v3/js/ie/html5shiv.js')
+		if (!isIE6 && !isIE7) {
+			importJS('../v3/js/ie/respond.min.js')
+		}
+		importJS('../v3/js/ie/excanvas.js')
+	}
+	if (/MSIE (6|7)\.0/.test(navigator.userAgent)) {
+		importCSS('../v3/css/bootstrap-ie6.css')
+		importJS('../v3/js/ie/bootstrap-ie6.js')
+	}
+	if (isIE && ieVersion < 9 || isIE8) {
+		importCSS('../v3/css/v3-site-ie.css')
+	}
+	if (inTouch) {
+		importJS('../v3/js/hammer.min.js')
+	}
+	importJS('../v3/js/responsiveslides.js')
+</script>
