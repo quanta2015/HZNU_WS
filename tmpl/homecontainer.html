@@ -2,16 +2,25 @@
 
 <div class="container m-home m-big">
           <div class="m-new_img">
-                <img src="">
-              </div>
+                    <!--新闻资讯文档首张图片-->
+                   <cms:article catalog="新闻资讯"  count="1" type="Recent" level="CurrentAndChild" loadextend="true" loadcontent="true" > 
+                              <a class="image" href="${Article.Link}" title="${Article.Title}"> 
+                                        <z:if condition="${Article.firstImage}"><img src="${imageSize(Article.firstImage,500,400)}"></z:if>
+                                        <z:else>          
+                                          <img src='${prefix("images/bignao.jpg")}' style="height:100%;width:100%;">       
+                                        </z:else> 
+                              </a>
+                   </cms:article>
+
+           </div>
           <div class="m-new_list">
                 <div class="m-tl">
-                      <label>通知公告</label>
-                      <span>Announcement and Notice</span>
+                      <label>新闻资讯</label>
+                      <span>News</span>
                       <i>更多</i>
-                    </div>
+                </div>
                 <div class="m-bd">
-                      <cms:article count="4" loadextend="true" catalogid="21157" >
+                         <cms:article catalog="新闻资讯"  count="10" loadextend="true" >
                             <z:list>
                                 <li>
                                       <label class="u-tl"><a href="${Article.Link}">${Article.Title}</a></label>
@@ -19,8 +28,8 @@
                                     </li>
                                 </z:list>
                           </cms:article>
-                    </div>
-              </div>
+                 </div>
+           </div>
 </div>
 
 <div class="container m-home">
@@ -31,67 +40,62 @@
                       <i>更多</i>
                     </div>
                 <div class="m-bd">
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
+                       <cms:article catalog="通知公告"  count="10" loadextend="true" >
+                            <z:list>
+                                <li>
+                                      <label class="u-tl"><a href="${Article.Link}">${Article.Title}</a></label>
+                                      <span class="u-date">${format(Article.PublishDate,'yyyy-MM-dd')}</span>
+                                    </li>
+                                </z:list>
+                          </cms:article>
                     </div>
               </div>
           <div class="m-item">
                 <div class="m-tl">
-                      <label>党建工会</label>
-                      <span>Party building Union</span>
+                      <label>活动风采</label>
+                      <span>Student Garden</span>
                       <i>更多</i>
                     </div>
                 <div class="m-bd">
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
+                       <cms:article catalog="活动风采"  count="10" loadextend="true" >
+                            <z:list>
+                                <li>
+                                      <label class="u-tl"><a href="${Article.Link}">${Article.Title}</a></label>
+                                      <span class="u-date">${format(Article.PublishDate,'yyyy-MM-dd')}</span>
+                                    </li>
+                                </z:list>
+                          </cms:article>
                     </div>
               </div>
           <div class="m-item m-lg">
                 <div class="m-tl">
-                      <label>学术报告</label>
-                      <span>Party building Union</span>
+                      <label>讲座报告</label>
+                      <span>Lecture Report</span>
                       <i>更多</i>
                     </div>
                 <div class="m-bd_img">
-                      <li>
-                            <img src="">
-                            <p>
-                                  <label class="u-tl"><a href="#">2020年国家自然科学基金申报过程2020年国家自然科学基金申报过程</a></label>
-                                  <span>a环太平洋大学联盟</span>
-                                  <span>2020-12-10 09:00</span>
-                                  <span>树华楼三层会议室</span>
-                                </p>
-                          </li>
-                      <li>
-                            <img src="">
-                            <p>
-                                  <label class="u-tl"><a href="#">2020年国家自然科学基金申报过程2020年国家自然科学基金申报过程</a></label>
-                                  <span>环太平洋大学联盟</span>
-                                  <span>2020-12-10 09:00</span>
-                                  <span>树华楼三层会议室</span>
-                                </p>
-                          </li>
-                    </div>
+                         <cms:article catalog="讲座报告"  count="2" loadextend="true" loadcontent="true"  >
+                            <z:list> 
+                                 <li>
+                                        <!--讲座报告文档首张图片-->
+                                        <a class="image" href="${Article.Link}" title="${Article.Title}"> 
+                                                <z:if condition="${Article.LogoFile}"><img src="${imageSize(Article.LogoFile,200,200)}"></z:if>
+                                                <z:else>          
+                                                  <img src='${prefix("images/jiangzuo.jpg")}' style="height:100%;width:100%;">       
+                                                </z:else> 
+                                        </a>
+
+                                        <p>
+                                             <label class="u-tl"><a href="${Article.Link}">${Article.Title}</a></label>                                               
+                                              <span>报告人：${Article.ShortTitle}</span>
+                                              <span class="u-date">讲座时间：${Article.SubTitle}</span>
+                                              <span>讲座地点：${Article.SourceTitle}</span>
+                                                <span >${Article.Summary}</span>
+                                        </p>
+                                  </li> 
+                                </z:list>
+                          </cms:article> 
+                   </div>
               </div>
           <div class="m-item">
                 <div class="m-tl">
@@ -100,31 +104,27 @@
                       <i>更多</i>
                     </div>
                 <div class="m-bd">
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
-                      <li>
-                <label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span>
-            </li>
+                         <cms:article catalog="教育教学"  count="10" loadextend="true" >
+                            <z:list>
+                                <li>
+                                      <label class="u-tl"><a href="${Article.Link}">${Article.Title}</a></label>
+                                      <span class="u-date">${format(Article.PublishDate,'yyyy-MM-dd')}</span>
+                                    </li>
+                                </z:list>
+                          </cms:article>
                     </div>
               </div>
           <div class="m-item">
                 <div class="m-tl">
-                      <label>学生工作</label>
-                      <span>Student Garden</span>
+                      <label>科研动态</label>
+                      <span>Research Infomation</span>
                       <i>更多</i>
                     </div>
                 <div class="m-bd">
-                      <cms:article count="4" loadextend="true" catalogid="21157" >
+                         <cms:article catalog="学术动态"  count="10" loadextend="true" >
                             <z:list>
                                 <li>
-                                      <a href="${Article.Link}"><label class="u-tl">${Article.Title}</label></a>
+                                      <label class="u-tl"><a href="${Article.Link}">${Article.Title}</a></label>
                                       <span class="u-date">${format(Article.PublishDate,'yyyy-MM-dd')}</span>
                                     </li>
                                 </z:list>
