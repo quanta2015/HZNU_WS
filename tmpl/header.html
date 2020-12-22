@@ -11,8 +11,10 @@
             <div class="m-logo-r">
                 <div class="m-link">
                     <li><a href="http://www.hznu.edu.cn" target='_blank'>学校首页</a></li>
-                    <li><a href="http://yxb.hznu.edu.cn" target='_blank'>学部首页</a></li>
-                    <li><a href="english">ENGLISH</a></li> 
+                    <li><a href="http://yxy.hznu.edu.cn" target='_blank'>学部首页</a></li>
+                    <cms:catalog  name="英文版" type="Article">
+                          <li><a href="${Catalog.Link}">ENGLISH</a></li>  
+                    </cms:catalog> 
                   </div>
                <div class="m-search">
                    <input type="text">
@@ -45,10 +47,8 @@
                     </z:list>
                </cms:catalog> 
 
-                  <li class="nav-item">
-                    <cms:catalog alias="xyzj" type="Article">
-                        <a class="nav-link" href="${Catalog.Link}" href="${Catalog.Link}">远程办公</a>
-                      </cms:catalog>       
+                  <li class="nav-item"> 
+                        <a class="nav-link" href="http://sphoa.hznu.edu.cn" >远程办公</a> 
                   </li>
               </ul>
           </div>
