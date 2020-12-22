@@ -1,0 +1,54 @@
+<z:config type="Block" name="英文版头部" />
+ 
+
+<nav class="m-nav navbar navbar-expand-md navbar-light bg-light g-base">
+    <div class="m-nav_wrap">
+        <div class="m-logo">
+
+            <div class="m-logo-m">
+                 <img class="pc" src="../lib/img/logo.png" alt="">
+                 <img class="mobile" src="../lib/img/logo_mobile.png" alt="">
+              </div>
+            <div class="m-logo-r">
+                <div class="m-link">
+                    <li><a href="http://www.hznu.edu.cn" target='_blank'>HZNU Home</a></li>
+                    <li><a href="http://yxy.hznu.edu.cn" target='_blank'>HZNU HSC</a></li>
+                    <li><a href="/">中文版</a></li>
+                  </div>
+               <div class="m-search">
+                   <input type="text">
+                 </div>
+              </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+        <div class="m-menu collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav">
+                 <li class="nav-item"> 
+                    <cms:catalog  name="英文版" type="Article">
+                       <a class="nav-link" href="${Catalog.Link}">HomePage</a> 
+                    </cms:catalog> 
+                 </li> 
+
+                <cms:catalog count="4" name="英文版" level="child"  type="Article"> 
+                    <z:list> 
+                    <li class="nav-item dropdown">         
+                       <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">${Catalog.Name}</a>                   
+                       <div class="dropdown-menu">
+                           <cms:catalog  type="Article"  level="Child" > 
+                               <z:list> 
+                                  <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">${Catalog.Name}</a>
+                               </z:list>
+                            </cms:catalog>
+                       </div>
+                    </li>
+                    </z:list>
+               </cms:catalog> 
+ 
+              </ul>
+          </div>
+      </div>
+</nav>

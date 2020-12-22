@@ -1,0 +1,37 @@
+<z:config type="ArticleList" name="英文版首页" />
+  
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!--包含通用样式--> 
+    <cms:include file="include.template.html" />
+    <title>${Catalog.name}</title>
+     
+  </head>
+
+  <body class="bg-white">
+    <!-- 包含页头 -->
+    <cms:include file="zenglish.header.template.html">{ZCMS:文件包含}</cms:include>
+
+    <!-- 栏目导航 -->
+    <div class="container m-slide">
+      <cms:imageplayer code="home_imglist">{ZCMS:图片播放器}</cms:imageplayer>
+    </div> 
+
+    <!-- 包含中间内容块 -->
+    <cms:include file="zenglish.homecontainer.template.html">{ZCMS:文件包含}</cms:include>
+   
+     
+    <!-- 包含页尾 -->
+    <cms:include file="zenglish.footer.template.html">{ZCMS:文件包含}</cms:include>
+
+
+    <script src="../lib/js/jquery.min.js"></script>
+    <script src="../lib/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/js/bootstrap-hover-dropdown.min.js"></script>
+    <script src="../lib/js/header.js"></script>
+    <script src="../lib/js/index.js"></script>
+
+
+  </body>
+</html>

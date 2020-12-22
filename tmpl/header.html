@@ -1,56 +1,55 @@
 <z:config type="Block" name="首页头部"  />
-
 <nav class="m-nav navbar navbar-expand-md navbar-light bg-light g-base">
-    <div class="m-nav_wrap">
-        <div class="m-logo">
-
-            <div class="m-logo-m">
-                 <img class="pc" src="../lib/img/logo.png" alt="">
-                 <img class="mobile" src="../lib/img/logo_mobile.png" alt="">
-              </div>
-            <div class="m-logo-r">
-                <div class="m-link">
-                    <li><a href="http://www.hznu.edu.cn" target='_blank'>学校首页</a></li>
-                    <li><a href="http://yxb.hznu.edu.cn" target='_blank'>学部首页</a></li>
-                    <li><a href="english">ENGLISH</a></li> 
-                  </div>
-               <div class="m-search">
-                   <input type="text">
-                 </div>
-              </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-          </div>
-        <div class="m-menu collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav">
-                 <li class="nav-item">
-                    <a class="nav-link" href="/">首页</a>
-                 </li> 
-
-                <cms:catalog count="8" level="root"  type="Article"> 
-                    <z:list> 
-                    <li class="nav-item dropdown">         
-                       <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">${Catalog.Name}</a>                   
-                       <div class="dropdown-menu">
-                           <cms:catalog  type="Article"  level="Child" > 
-                               <z:list> 
-                                  <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">${Catalog.Name}</a>
-                               </z:list>
-                            </cms:catalog>
-                       </div>
-                    </li>
-                    </z:list>
-               </cms:catalog> 
-
-                  <li class="nav-item">
-                    <cms:catalog alias="xyzj" type="Article">
-                        <a class="nav-link" href="${Catalog.Link}" href="${Catalog.Link}">远程办公</a>
-                      </cms:catalog>       
-                  </li>
-              </ul>
-          </div>
+  <div class="m-nav_wrap">
+    <div class="m-logo">
+      <div class="m-logo-m">
+        <a class="nav-link" href="/">
+          <img class="pc" src="../lib/img/logo.png" alt="">
+        </a>
+        <img class="mobile" src="../lib/img/logo_mobile.png" alt="">
+        
       </div>
+      <div class="m-logo-r">
+        <div class="m-link">
+          <li><a href="http://www.hznu.edu.cn" target='_blank'>学校首页</a></li>
+          <li><a href="http://yxy.hznu.edu.cn" target='_blank'>学部首页</a></li>
+          <cms:catalog  name="英文版" type="Article">
+          <li><a href="${Catalog.Link}">ENGLISH</a></li>
+          </cms:catalog>
+        </div>
+        <div class="m-search">
+          <input type="text">
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="m-menu collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">首页</a>
+        </li>
+        <cms:catalog count="8" level="root"  type="Article">
+        <z:list>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="${Catalog.Link}" data-toggle="dropdown">${Catalog.Name}</a>
+          <div class="dropdown-menu">
+            <cms:catalog  type="Article"  level="Child" >
+            <z:list>
+            <a class="dropdown-item g-text-gray" href="${Catalog.Link}" target="_self">${Catalog.Name}</a>
+            </z:list>
+            </cms:catalog>
+          </div>
+        </li>
+        </z:list>
+        </cms:catalog>
+        <li class="nav-item">
+          <a class="nav-link" href="http://sphoa.hznu.edu.cn" >远程办公</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
