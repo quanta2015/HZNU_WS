@@ -1,0 +1,85 @@
+<z:config type="ArticleList"  name="块状文章列表页" />
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+ 
+<head> 
+  <!--包含通用样式--> 
+  <cms:include file="include.template.html"  />
+      <title>${Catalog.name}</title> 
+</head>
+
+
+<body class="bg-white">
+        
+  <!-- 包含页头 -->
+      <cms:include file="header.template.html">{ZCMS:文件包含}</cms:include>
+
+    
+  <!-- 栏目导航 -->
+      <div class="container m-slide">
+            <cms:imageplayer code="home_imglist">{ZCMS:图片播放器}</cms:imageplayer>
+      </div>
+
+  <!--左侧栏目 -->
+  
+    <div class="m-aside">
+        <h1>${Catalog.Name}</h1>
+        <ul>
+                <z:if condition="${catalog.ChildCount>0}">          
+                  <cms:catalog level="child">
+                    <z:list>                                                         
+                      <li>
+                      <a id="${Catalog.InnerCode}" href="${Catalog.Link}">${Catalog.Name}&nbsp;&nbsp; &gt;</a>
+                      </li>                           
+                    </z:list>
+                  </cms:catalog>
+                </z:if>
+                <z:elseif condition="${catalog.TreeLevel>1}">
+                  <cms:catalog level="current">
+                    <z:list>                                                         
+                      <li>
+                      <a id="${Catalog.InnerCode}" href="${Catalog.Link}">${Catalog.Name}&nbsp;&nbsp; &gt;</a>
+                      </li>                               
+                    </z:list>
+                  </cms:catalog>
+                </z:elseif>
+                <z:else>
+                  <li>
+                    <a id="${Catalog.InnerCode}" href="${Catalog.Link}">${Catalog.Name}&nbsp;&nbsp; &gt;</a>
+                    </li> 
+                </z:else>
+        </ul>
+    </div>
+
+  <!-- 右侧显示栏目列表 -->
+   <div class="container m-list">
+          <div class="m-bd_list">
+                    <cms:article  page="true" pagesize="10" level="Child">
+                      <z:list>
+                        <li>
+                          <div class="u-date">
+                            <span>${format(Article.PublishDate,'yyyy-MM')}</span>
+                            <strong>${format(Article.PublishDate,'dd')}</strong>
+                          </div>
+                          <label><a href="#">${Article.Title}</a></label>
+                        </li>
+                      </z:list>
+         </div>
+  </div>  
+      
+  <!-- 包含页尾 -->
+      <cms:include file="footer.template.html">{ZCMS:文件包含}</cms:include>
+
+      
+  <script src=".. /lib/js/jquery.min.js"></script>
+      
+  <script src=".. /lib/js/bootstrap.bundle.min.js"></script>
+      
+  <script src=".. /lib/js/bootstrap-hover-dropdown.min.js"></script>
+      
+  <script src=".. /lib/js/header.js"></script> 
+    
+</body>
+
+</html>

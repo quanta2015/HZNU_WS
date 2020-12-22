@@ -4,20 +4,7 @@
 <html lang="zh-cn">
   <head>
     <!--包含通用样式-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="format-detection" content="telephone=no">
-
-    <cms:include file="include.template.html" />
-    <title>${Catalog.name}</title>
-    <meta name="description" content="${Site.Description}" />
-
-    <link rel="stylesheet" href="../lib/css/default.css">
-    <link rel="stylesheet" href="../lib/css/nav.css">
-    <link rel="stylesheet" href="../lib/css/rslide.css">
-    <link rel="stylesheet" href="../lib/css/header.css">
-    <link rel="stylesheet" href="../lib/css/footer.css">
+    <cms:include file="include.template.html"  />
     <link rel="stylesheet" href="../lib/css/list.css">
     
   </head>
@@ -26,7 +13,6 @@
     <!-- 包含页头 -->
     <cms:include file="header.template.html">{ZCMS:文件包含}</cms:include>
 
-  
     <div class="container m-list">
       <div class="m-list_wrap">
         <h1>${Catalog.Name}</h1>

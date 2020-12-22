@@ -1,0 +1,56 @@
+.m-detail {
+    margin: 150px 0 0 0;
+    background: #fff;
+}
+
+.m-detail_wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.m-detail_bar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 20px 0 20px;
+}
+
+.m-detail_bar>h1 {
+    font-size: 36px;
+    margin: 40px 0 0 0;
+    color: #a80000;
+}
+
+
+
+.m-detail_bar>li>a {
+    font-size: 16px!important;
+}
+
+.m-detail_main>p {
+    padding: 20px 30px;
+    line-height: 2;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.m-detail_main>h2 {
+    text-align: center;
+    color: #666;
+}
+
+.m-detail_main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 100px 0;
+}
+
+
+.m-pos {
+    position: absolute;
+    right: 0;
+}
+
+.m-pos>a:last-child {
+    color: #a80000;
+}

@@ -3,23 +3,10 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
-    <!--包含通用样式-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="format-detection" content="telephone=no">
-
+    <!--包含通用样式--> 
     <cms:include file="include.template.html" />
     <title>${Catalog.name}</title>
-    <meta name="description" content="${Site.Description}" />
-
-    <link rel="stylesheet" href="../lib/css/default.css">
-    <link rel="stylesheet" href="../lib/css/nav.css">
-    <link rel="stylesheet" href="../lib/css/rslide.css">
-    <link rel="stylesheet" href="../lib/css/header.css">
-    <link rel="stylesheet" href="../lib/css/index.css">
-    
-    <link rel="stylesheet" href="../lib/css/footer.css">
+     
   </head>
 
   <body class="bg-white">
@@ -29,116 +16,12 @@
     <!-- 栏目导航 -->
     <div class="container m-slide">
       <cms:imageplayer code="home_imglist">{ZCMS:图片播放器}</cms:imageplayer>
-    </div>
+    </div> 
 
-    <div class="container m-home m-big">
-      <div class="m-new_img">
-        <img src="">
-      </div>
-      <div class="m-new_list">
-        <div class="m-tl">
-          <label>通知公告</label>
-          <span>Announcement and Notice</span>
-          <i>更多</i>
-        </div>
-        <div class="m-bd">
-          <cms:article count="4" loadextend="true" catalogid="21157" >
-            <z:list>
-            <li>
-              <label class="u-tl"><a href="${Article.Link}">${Article.Title}</a></label>
-              <span class="u-date">${format(Article.PublishDate,'yyyy-MM-dd')}</span>
-            </li>
-            </z:list>
-          </cms:article>
-        </div>
-      </div>
-    </div>
-
-    <div class="container m-home">
-      <div class="m-item">
-        <div class="m-tl">
-          <label>通知公告</label>
-          <span>Announcement and Notice</span>
-          <i>更多</i>
-        </div>
-        <div class="m-bd">
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-        </div>
-      </div>
-      <div class="m-item">
-        <div class="m-tl">
-          <label>党建工会</label>
-          <span>Party building Union</span>
-          <i>更多</i>
-        </div>
-        <div class="m-bd">
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-        </div>
-      </div>
-      <div class="m-item m-lg">
-        <div class="m-tl">
-          <label>学术报告</label>
-          <span>Party building Union</span>
-          <i>更多</i>
-        </div>
-        <div class="m-bd_img">
-          <li>
-            <img src="">
-            <p>
-              <label class="u-tl"><a href="#">2020年国家自然科学基金申报过程2020年国家自然科学基金申报过程</a></label>
-              <span>环太平洋大学联盟</span>
-              <span>2020-12-10 09:00</span>
-              <span>树华楼三层会议室</span>
-            </p>
-          </li>
-          <li>
-            <img src="">
-            <p>
-              <label class="u-tl"><a href="#">2020年国家自然科学基金申报过程2020年国家自然科学基金申报过程</a></label>
-              <span>环太平洋大学联盟</span>
-              <span>2020-12-10 09:00</span>
-              <span>树华楼三层会议室</span>
-            </p>
-          </li>
-        </div>
-      </div>
-      <div class="m-item">
-        <div class="m-tl">
-          <label>教学事务</label>
-          <span>Teaching work</span>
-          <i>更多</i>
-        </div>
-        <div class="m-bd">
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-          <li><label class="u-tl"><a href="#">测试数据标题，长度比较长，请勿批评阿弥陀佛善哉善哉</a></label><span class="u-date">2020-12-01</span></li>
-        </div>
-      </div>
-      <div class="m-item">
-        <div class="m-tl">
-          <label>学生工作</label>
-          <span>Student Garden</span>
-          <i>更多</i>
-        </div>
-        <div class="m-bd">
-          <cms:article count="4" loadextend="true" catalogid="21157" >
-            <z:list>
-            <li>
-              <a href="${Article.Link}"><label class="u-tl">${Article.Title}</label></a>
-              <span class="u-date">${format(Article.PublishDate,'yyyy-MM-dd')}</span>
-            </li>
-            </z:list>
-          </cms:article>
-        </div>
-      </div>
-    </div>
+    <!-- 包含中间内容块 -->
+    <cms:include file="homecontainer.template.html">{ZCMS:文件包含}</cms:include>
+   
+     
     <!-- 包含页尾 -->
     <cms:include file="footer.template.html">{ZCMS:文件包含}</cms:include>
 
