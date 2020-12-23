@@ -21,58 +21,7 @@
             <cms:imageplayer code="home_imglist">{ZCMS:图片播放器}</cms:imageplayer>
       </div>
 
-<<<<<<< HEAD
   <!--左侧栏目 -->
-=======
-      
-    <div class="container m-list">
-        <div class="m-list_wrap">
-          <h1>${Catalog.Name}</h1>
-          <div class="m-aside textNav">
-            <cms:catalog level="current">
-              <z:list>
-                <li><a id="${Catalog.InnerCode}" href="${Catalog.Link}">${Catalog.Name}</a></li>
-              </z:list>
-            </cms:catalog>
-          </div>
-          <div class="m-bd">
-            <h1>
-              <span>当前位置：</span> 
-              <a href="#">学院首页</a>
-              <a href="@">新闻公告</a>
-            </h1>
-            <div class="m-bd_list">
-              <cms:article loadcontent="true"  page=true pagesize=15 >
-              <z:list>
-                <li>
-                  <div class="u-date">
-                    <span>${format(Article.PublishDate,'yyyy.MM')}</span>
-                    <strong>${format(Article.PublishDate,'dd')}</strong>
-                  </div>
-                  <label><a href="${Article.Link}">${Article.Title}</a></label>
-                </li>
-              </z:list>
-              </cms:article>
-              <!-- <cms:article  catalogID="21141" page="true" pagesize="10" level="Child">
-                <z:list>
-                  <li>
-                    <div class="u-date">
-                      <span>${format(Article.PublishDate,'yyyy-MM')}</span>
-                      <strong>${format(Article.PublishDate,'dd')}</strong>
-                    </div>
-                    <label><a href="#">${Article.Title}</a></label>
-                  </li>
-                </z:list>
-              </cms:article> -->
-            </div>
-          </div>
-        </div>
-        
-      </div>
-
-  
-  <!--左侧栏目 -->
->>>>>>> fe4327271512d5deb0051697c549621b52473ee2
   
     <div class="m-aside">
         <h1>${Catalog.Name}</h1>
