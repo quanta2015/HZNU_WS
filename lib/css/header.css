@@ -106,6 +106,9 @@
 
 /*-----  PC  -----*/
 @media only screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
 
   .m-nav_wrap {
     width: 100%;
@@ -129,6 +132,7 @@
     color: #fff;
     width: 100%;
     max-width: 1920px;
+    box-sizing: border-box;
   }
   .m-logo>button {
     display: none;
@@ -139,9 +143,7 @@
   .m-logo-m>img {
     height: 70px;
   }
-  .m-logo-m>.mobile {
-    display: none;
-  }
+  
 
   .m-logo-r {
     display: flex;

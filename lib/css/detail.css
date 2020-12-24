@@ -153,7 +153,7 @@
 }
 .m-detail_main>p>span {
     font-family: "microsoft yahei"!important;
-    line-height: 2;
+    line-height: 2!important;
 }
     
 .m-detail_main {

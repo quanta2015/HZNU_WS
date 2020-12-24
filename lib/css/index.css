@@ -260,7 +260,7 @@
     width: 10px;
     height: 10px;
     position: absolute;
-    background: #c86;
+    background: #ed9595;
     left: 5px;
     top: 12px;
     border-radius: 8px 1px;
@@ -271,6 +271,8 @@
   }
   .m-bd_img a {
       width: 135px;
+      overflow: hidden;
+      height: 200px;
       overflow: hidden;
   }
 

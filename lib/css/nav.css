@@ -79,9 +79,10 @@
   margin-top: 4px;
 }
 
-.navbar-toggler.collapsed .icon-bar {
-  transform: none;
-  opacity: 1;
+.collapsed span {
+  transform: none!important;
+  opacity: 1!important;
+  width: 22px!important
 }
 
 
