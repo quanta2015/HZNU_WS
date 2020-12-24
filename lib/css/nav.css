@@ -62,28 +62,39 @@
   outline: none;
 }
 
-.navbar-toggler .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-  background-color: #fff;
-  transition: .4s all;
+.navbar-toggler.collapsed .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+    transition: .4s all;
+    transform: none;
 }
+
+
+
 
 .navbar-toggler .icon-bar+.icon-bar {
   margin-top: 4px;
 }
 
-.navbar-toggler.open .icon-bar:nth-child(2) {
+.navbar-toggler.collapsed .icon-bar {
+  transform: none;
+  opacity: 1;
+}
+
+
+.navbar-toggler .icon-bar:nth-child(2) {
   opacity: 0;
   width: 0;
 }
 
-.navbar-toggler.open .icon-bar:first-child {
+
+.navbar-toggler .icon-bar:first-child {
   transform: rotate(44deg) translateY(4px) translateX(4px);
 }
 
-.navbar-toggler.open .icon-bar:last-child {
+.navbar-toggler .icon-bar:last-child {
   transform: rotate(-44deg) translateY(-5px) translateX(4px);
 }

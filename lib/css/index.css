@@ -7,21 +7,30 @@
     align-items: center;
     justify-content: center;
     margin: 150px 0 30px 0 !important;
+    overflow: hidden;
   }
 
   .m-new_img {
     flex: 1;
     display: flex;
-    justify-content: center;
-    background: #666;
+    flex-direction: column;
     margin: 0 15px 0 10px;
+    overflow: hidden;
+    height: 300px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  .m-new_img>a {
+    box-shadow: 2px 2px 3px rgba(0,0,0,.2), -2px -2px 1px rgba(0,0,0,.2);
     overflow: hidden;
   }
 
-  .m-new_img>img {
-    height: 500px;
-    width: 500px;
-    background: #666;
+  .m-new_img img {
+    width: 100%;
+    height: 100%;
   }
 
   .m-new_list {
@@ -61,6 +70,14 @@
     width: 50%;
     display: flex;
   }
+  .m-bd_img>li>a {
+    overflow: hidden;
+  }
+
+  .m-bd_img>li>a>img {
+      height: 100%;
+      width: auto;
+  }
 
   .m-bd_img {
     display: flex;
@@ -76,7 +93,8 @@
     display: flex;
     flex-direction: column;
     padding: 10px 15px;
-    width: calc(100% - 180px);
+    width: calc(100% - 200px);
+    box-sizing: border-box;
   }
 
   .m-bd_img>li>p>label {
@@ -95,6 +113,7 @@
     padding: 5px 0 5px 35px;
     width: 100%;
     position: relative;
+    box-sizing: border-box;
   }
 
   .m-bd_img>li>p>span:before {
@@ -145,9 +164,10 @@
   }
 
   .m-big {
-    height: unset !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    height: unset!important;
+    margin: 0!important;
+    padding: 0!important;
+    flex-direction: column!important;
   }
 
   .m-new_list {
@@ -159,6 +179,7 @@
     display: flex;
     flex-direction: column;
     width: calc(100% - 20px) !important;
+    box-sizing: border-box;
   }
 
   .m-lg {
@@ -210,8 +231,9 @@
     display: flex;
     flex-direction: column;
     padding: 0 0 0 15px;
-    width: calc(100% - 120px);
+    width: calc(100% - 135px);
     margin: 0;
+    box-sizing: border-box;
   }
 
   .m-bd_img>li>p>label {
@@ -243,6 +265,15 @@
     top: 12px;
     border-radius: 8px 1px;
   }
+  .m-bd_img img {
+    width: auto;
+    height: 100%;
+  }
+  .m-bd_img a {
+      width: 135px;
+      overflow: hidden;
+  }
+
 
 }
 
@@ -256,10 +287,10 @@
 }
 
 .m-big {
-  height: 500px;
+  /* height: 500px; */
   flex-wrap: nowrap;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin-bottom: -30px!important;
+  margin-top: 0px!important;
 }
 
 .m-item {
@@ -302,7 +333,7 @@
   font-style: normal;
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 0px;
   background: #b80000;
   padding: 4px 15px;
   border-radius: 10px 4px;
